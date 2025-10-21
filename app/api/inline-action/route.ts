@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
 
-  Response.json({
+  return Response.json({
     message: 'test',
     success: true,
     embed: {
