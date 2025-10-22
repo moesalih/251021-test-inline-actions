@@ -24,6 +24,11 @@ export async function POST(request: NextRequest) {
           variant: 'outlined',
           action: {
             type: 'sdk_action',
+            sdkAction: 'actions.composeCast',
+            options: {
+              text: 'Check out this event!',
+              embeds: ['https://sonar.val.run'],
+            },
           },
         },
       ],
