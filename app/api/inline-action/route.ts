@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
           variant: 'outlined',
           action: {
             type: 'launch_frame_tray',
-            url: 'https://251021-test-inline-actions.vercel.app/',
+            url: 'https://251021-test-inline-actions.vercel.app/event',
           }
         },
       ],
