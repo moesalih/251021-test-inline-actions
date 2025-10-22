@@ -12,12 +12,19 @@ export async function POST(request: NextRequest) {
       imageUrl: 'https://imgur.com/NgvRfSF.png',
       buttons: [
         {
-          title: 'Event Details...',
+          title: 'Event Details',
           variant: 'outlined',
           action: {
             type: 'launch_frame_tray',
             url: 'https://251021-test-inline-actions.vercel.app/event',
           }
+        },
+        {
+          title: 'Share',
+          variant: 'outlined',
+          action: {
+            type: 'sdk_action',
+          },
         },
       ],
 
