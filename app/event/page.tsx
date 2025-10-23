@@ -1,4 +1,79 @@
+import type { Metadata } from 'next'
 import Image from "next/image";
+
+import { appUrl, description, title } from '@/lib/metadata'
+
+
+const miniapp = {
+  version: '1',
+  // imageUrl: `${appUrl}/opengraph-image`,
+  imageUrl: `https://imgur.com/5ze4aZw.png`,
+  button: {
+    title: 'Launch Frame',
+    action: {
+      type: 'launch_frame',
+      name: title,
+      // url: appUrl,
+      splashImageUrl: `${appUrl}/splash.png`,
+      splashBackgroundColor: '#111111',
+    },
+  },
+  buttons: [
+    {
+      title: 'RSVP Yes',
+      variant: 'filled',
+      action: {
+        type: 'api_call',
+        url: 'https://251021-test-inline-actions.vercel.app/api/inline-action',
+      },
+    },
+    // {
+    //   title: 'RSVP No',
+    //   variant: 'outlined',
+    //   action: {
+    //     type: 'api_call',
+    //     url: 'https://251021-test-inline-actions.vercel.app/api/inline-action',
+    //   },
+    // },
+    {
+      title: 'Event Details',
+      variant: 'outlined',
+      action: {
+        type: 'launch_frame_tray',
+        // url: 'https://frames-v2-demo-lilac.vercel.app/test?answer=true&payment=false',
+        url: 'https://251021-test-inline-actions.vercel.app/event',
+      },
+    },
+    {
+      title: 'Share',
+      variant: 'outlined',
+      action: {
+        type: 'sdk_action',
+        sdkAction: 'actions.composeCast',
+        options: {
+          text: 'Check out this event!',
+          embeds: ['https://sonar.val.run'],
+        },
+      },
+    },
+  ],
+
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+    },
+    other: {
+      'fc:miniapp': JSON.stringify(miniapp),
+    },
+  }
+}
+
 
 export default function Home() {
   return (
