@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
   const manifest = {
     accountAssociation,
     frame: {
-      name: name,
+      name: title,
       version: '1',
       iconUrl: baseUrl + '/icon',
       homeUrl: baseUrl,
