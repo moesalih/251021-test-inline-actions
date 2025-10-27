@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
             sdkAction: 'actions.composeCast',
             options: {
               text: 'Check out this event!',
-              embeds: ['https://sonar.val.run'],
+              embeds: ['https://251021-test-inline-actions.vercel.app/event'],
             },
           },
         },
