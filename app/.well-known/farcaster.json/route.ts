@@ -9,9 +9,9 @@ export async function GET(request: NextRequest) {
   let accountAssociation = {}
   if (baseUrl == 'https://251021-test-inline-actions.vercel.app') {
     accountAssociation = {
-      header: 'xx',
-      payload: 'xx',
-      signature: 'xx',
+      "header": "eyJmaWQiOjIwNzMsInR5cGUiOiJhdXRoIiwia2V5IjoiMHhkNjk3NTM4RWQ2MzUzMzQwNzRDNGM4MDM3MEU5MzQ0NjQzQWEwRGJhIn0",
+      "payload": "eyJkb21haW4iOiIyNTEwMjEtdGVzdC1pbmxpbmUtYWN0aW9ucy52ZXJjZWwuYXBwIn0",
+      "signature": "vIych9xkJ4OOPPPIenOtzJFmopdgrbL0F3MqbVUDgPc9bd62OLX/27QhpPyfMdbi+qBSAN0cKFWDvBSrLpDIBhw="
     }
   }
 
