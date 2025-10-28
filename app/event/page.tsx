@@ -24,7 +24,7 @@ const miniapp = {
       variant: 'filled',
       action: {
         type: 'api_call',
-        url: 'https://251021-test-inline-actions.vercel.app/api/inline-action',
+        url: 'https://251021-test-inline-actions.vercel.app/api/inline-action/event',
       },
     },
     // {
@@ -32,7 +32,7 @@ const miniapp = {
     //   variant: 'outlined',
     //   action: {
     //     type: 'api_call',
-    //     url: 'https://251021-test-inline-actions.vercel.app/api/inline-action',
+    //     url: 'https://251021-test-inline-actions.vercel.app/api/inline-action/event',
     //   },
     // },
     {
@@ -40,7 +40,6 @@ const miniapp = {
       variant: 'outlined',
       action: {
         type: 'launch_frame_tray',
-        // url: 'https://frames-v2-demo-lilac.vercel.app/test?answer=true&payment=false',
         url: 'https://251021-test-inline-actions.vercel.app/event',
       },
     },
