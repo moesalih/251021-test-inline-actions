@@ -69,6 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     other: {
       'fc:miniapp': JSON.stringify(miniapp),
+      'base:miniapp': JSON.stringify(miniapp),
     },
   }
 }
