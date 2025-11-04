@@ -1,9 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
-
-  const body = await request.json();
+  const body = await request.json()
   console.log(body)
+
+  // handle the request as needed
+  // you can use body.apiPayload and body.txHash here
 
   return Response.json({
     message: 'test',
@@ -17,7 +19,7 @@ export async function POST(request: NextRequest) {
           action: {
             type: 'launch_frame_tray',
             url: 'https://251021-test-inline-actions.vercel.app/event',
-          }
+          },
         },
         {
           title: 'Share',
@@ -32,8 +34,6 @@ export async function POST(request: NextRequest) {
           },
         },
       ],
-
     },
-  });
-
+  })
 }

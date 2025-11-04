@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import Image from "next/image";
+import Image from 'next/image'
 
 import { appUrl, description, title } from '@/lib/metadata'
-
 
 const miniapp = {
   version: '1',
@@ -25,16 +24,9 @@ const miniapp = {
       action: {
         type: 'api_call',
         url: 'https://251021-test-inline-actions.vercel.app/api/inline-action/event',
+        apiPayload: { rsvp: true },
       },
     },
-    // {
-    //   title: 'RSVP No',
-    //   variant: 'outlined',
-    //   action: {
-    //     type: 'api_call',
-    //     url: 'https://251021-test-inline-actions.vercel.app/api/inline-action/event',
-    //   },
-    // },
     {
       title: 'Event Details',
       variant: 'outlined',
@@ -56,7 +48,6 @@ const miniapp = {
       },
     },
   ],
-
 }
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -74,7 +65,6 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-
 export default function Home() {
   return (
     <div className="font-sans items-center justify-items-center min-h-screen p-8 pb-20 gap-16">
@@ -90,19 +80,24 @@ export default function Home() {
           />
           <div className="max-w-xl">
             <p className="mb-4">
-              Join us for Farcaster Fridays, an exciting event dedicated to exploring the latest advancements in decentralized social networking and blockchain technology. Whether you're a developer, enthusiast, or just curious about the future of social media, this event offers something for everyone.
+              Join us for Farcaster Fridays, an exciting event dedicated to exploring the latest advancements in
+              decentralized social networking and blockchain technology. Whether you're a developer, enthusiast, or just
+              curious about the future of social media, this event offers something for everyone.
             </p>
             <p className="mb-4">
-              Date: March 15-17, 2024<br />
-              Location: Silicon Valley Conference Center, CA<br />
+              Date: March 15-17, 2024
+              <br />
+              Location: Silicon Valley Conference Center, CA
+              <br />
               Registration Fee: $299 (Early Bird Discount Available)
             </p>
             <p>
-              Don't miss out on this opportunity to connect with like-minded individuals and stay ahead in the ever-evolving tech landscape. Register now to secure your spot!
+              Don't miss out on this opportunity to connect with like-minded individuals and stay ahead in the
+              ever-evolving tech landscape. Register now to secure your spot!
             </p>
           </div>
         </div>
       </main>
     </div>
-  );
+  )
 }
